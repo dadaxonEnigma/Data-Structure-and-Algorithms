@@ -43,11 +43,28 @@ class LinkedList:
             count += 1
             cur_node = cur_node.next
         return count
+    
+    def remove_at(self,index):
+        if index < 0 or index>=self.get_length():
+            raise Exception('Invalid index')
+        if index == 0:
+            self.head = self.head.next
+            return
+        count = 0
+        cur_node = self.head
+        while cur_node:
+            if count == index - 1:
+                cur_node.next = cur_node.next.next
+                break
+            cur_node = cur_node.next
+            count += 1
+
 
 llist = LinkedList()
 llist.insert_at_start('1')
 llist.insert_at_start('2')
 llist.insert_at_end('5')
 llist.insert_values([2,4,5,5,6,6,6])
+llist.remove_at(1)
 print(llist.get_length())
 llist.print_list()
