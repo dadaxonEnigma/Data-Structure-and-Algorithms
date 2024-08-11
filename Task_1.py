@@ -2,17 +2,22 @@ import random
 
 def guessing_game():
     answer = random.randint(1,10)
-    while True:
+    count = 3
+    while count:
         try:
-            user_guess = int(input('Каковы ваши предположения ? '))
+            print(f'Игра началось, у вас {count} попытки \n')
+            user_guess = int(input('Каковы ваши предположения ?'))
             if user_guess == answer:
                 print(f'Правильно! Ответ {user_guess}')
                 break
             if user_guess < answer:
                 print(f'Ваше число {user_guess} слишком маленькое!')
+                count -= 1
             if user_guess > answer:
                 print(f'Ваше число {user_guess} слишком большое!')
+                count -= 1
         except ValueError:
             print("Введите числавое выражение !")
+    print('Вы не отгадали число !')
             
 guessing_game()
