@@ -1,5 +1,4 @@
 import random
-
 def guessing_game():
     answer = random.randint(1,10)
     count = 3
