@@ -16,7 +16,7 @@ def guessing_game():
                 print(f'Ваше число {user_guess} слишком большое!')
                 count -= 1
         except ValueError:
-            print("Введите числавое выражение !")
+            print("Введrdrте числавое выражение !")
     print('Вы не отгадали число !')
             
 guessing_game()
