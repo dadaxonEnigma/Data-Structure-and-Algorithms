@@ -75,26 +75,21 @@
 
 # print(roman_to_int("VC"))
 
-import time
-from collections import deque
+# def array_diff(a,b):
+#     # res = []
+#     # for i in a:
+#     #     if i not in b:
+#     #         res.append(i)
+#     # return res
+#     return [x for x in a if a not in b]
+# print(array_diff([1,2,2],[]))
 
-N = 100_000  # Количество вставок
+# matrix = [[1,2,3],[4,5,6],[7,8,9]]
+# flattened = []
+# for row in matrix:
+#     for num in row:
+#         flattened.append(num)
+# print(flattened)
 
-# Вставка в начало list
-start_list = time.time()
-lst = []
-for i in range(N):
-    lst.insert(0, i)
-end_list = time.time()
-list_time = end_list - start_list
-
-# Вставка в начало deque
-start_deque = time.time()
-dq = deque()
-for i in range(N):
-    dq.appendleft(i)
-end_deque = time.time()
-deque_time = end_deque - start_deque
-
-print(f"Время вставки в начало списка list: {list_time} секунд")
-print(f"Время вставки в начало deque: {deque_time} секунд")
+# res = [num for row in matrix for num in row]
+# print(res)
