@@ -6,5 +6,5 @@ def josephus(n, k):
         i = (i + k - 1) % len(m)
         ans.append(m.pop(i))
     return ans
-res = josephus(5, 2)
+res = josephus(6, 2)
 print(res)
